@@ -1,0 +1,284 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+A	../secure_channel.py	/^    A = _get_client_secret()$/;"	kind:variable	line:134
+ADDR	../server/__init__.py	/^ADDR = ('', 1024)$/;"	kind:variable	line:10
+ADDR	../server_bak.py	/^ADDR = ('', 1024)$/;"	kind:variable	line:10
+ADD_FRIEND	../commands.py	/^    ADD_FRIEND = 3  # username:str$/;"	kind:variable	line:13
+ADD_FRIEND_REQUEST	../commands.py	/^    ADD_FRIEND_REQUEST = 107$/;"	kind:variable	line:29
+B	../secure_channel.py	/^    B = _get_server_secret()$/;"	kind:variable	line:135
+BOLD	../iface.py	/^    BOLD = '\\033[1m'$/;"	kind:variable	line:12
+BROADCASR	../commands.py	/^    BROADCASR = 119$/;"	kind:variable	line:41
+Base	../models.py	/^Base = declarative_base()$/;"	kind:variable	line:6
+ByteArrayReader	../messages.py	/^class ByteArrayReader:$/;"	kind:class	line:230
+CHAT	../client/__init__.py	/^    CHAT = 1$/;"	kind:variable	line:15
+CHAT	../client/client_bak.py	/^    CHAT = 1$/;"	kind:variable	line:15
+CHAT	../client/mode.py	/^    CHAT = 3$/;"	kind:variable	line:8
+CHAT_HISTORY	../commands.py	/^    CHAT_HISTORY = 105$/;"	kind:variable	line:27
+CLOSED	../client/__init__.py	/^CLOSED = False$/;"	kind:variable	line:39
+CLOSED	../client/client_bak.py	/^CLOSED = False$/;"	kind:variable	line:39
+COMMAND	../client/__init__.py	/^    COMMAND = 2$/;"	kind:variable	line:16
+COMMAND	../client/client_bak.py	/^    COMMAND = 2$/;"	kind:variable	line:16
+COMMAND	../client/mode.py	/^    COMMAND = 1$/;"	kind:variable	line:6
+COMMAND_WRONG	../commands.py	/^    COMMAND_WRONG = 201$/;"	kind:variable	line:43
+CONTACT_INFO	../commands.py	/^    CONTACT_INFO = 104$/;"	kind:variable	line:26
+CREATE_DATABASE	../bak_database.py	/^CREATE_DATABASE = {$/;"	kind:variable	line:18
+CREATE_ROOM	../commands.py	/^    CREATE_ROOM = 6  # name: str$/;"	kind:variable	line:16
+ChatRoom	../bak_database.py	/^ChatRoom = namedtuple('ChatRoom', 'id name encrypted password created_at')$/;"	kind:variable	line:7
+ChatRoom	../models.py	/^class ChatRoom(Base):$/;"	kind:class	line:44
+Client	../client/client.py	/^class Client:$/;"	kind:class	line:11
+ClientCommand	../client/commands.py	/^class ClientCommand(enum.IntEnum):$/;"	kind:class	line:6
+Command	../commands.py	/^class Command(enum.IntEnum):$/;"	kind:class	line:8
+ENDC	../iface.py	/^    ENDC = '\\033[0m'$/;"	kind:variable	line:11
+FAIL	../iface.py	/^    FAIL = '\\033[91m'$/;"	kind:variable	line:10
+FAILURE	../commands.py	/^    FAILURE = 117$/;"	kind:variable	line:39
+Friend	../bak_database.py	/^Friend = namedtuple('Friend', 'id from_user_id to_user_id accepted created_at')$/;"	kind:variable	line:10
+Friend	../models.py	/^class Friend(Base):$/;"	kind:class	line:56
+GAME	../client/__init__.py	/^    GAME = 3$/;"	kind:variable	line:17
+GAME	../client/client_bak.py	/^    GAME = 3$/;"	kind:variable	line:17
+HEADER	../iface.py	/^    HEADER = '\\033[95m'$/;"	kind:variable	line:6
+INCOMING_FRIEND_REQUEST	../commands.py	/^    INCOMING_FRIEND_REQUEST = 103$/;"	kind:variable	line:25
+JOIN_ROOM	../commands.py	/^    JOIN_ROOM = 5  # id:int$/;"	kind:variable	line:15
+K1	../secure_channel.py	/^    K1 = _get_share_secret(server_private_secret, A)$/;"	kind:variable	line:137
+K2	../secure_channel.py	/^    K2 = _get_share_secret(client_private_secret, B)$/;"	kind:variable	line:138
+LOGIN	../commands.py	/^    LOGIN = 1  # [username, password]$/;"	kind:variable	line:11
+LOGIN_BUNDLE	../commands.py	/^    LOGIN_BUNDLE = 114$/;"	kind:variable	line:36
+LOGIN_FAILURE	../commands.py	/^    LOGIN_FAILURE = 115$/;"	kind:variable	line:37
+LOGIN_SUCCESSFUL	../commands.py	/^    LOGIN_SUCCESSFUL = 101$/;"	kind:variable	line:23
+MESSAGE_TYPE	../messages.py	/^MESSAGE_TYPE = {$/;"	kind:variable	line:9
+MESSAGE_TYPE_INVERSE	../messages.py	/^MESSAGE_TYPE_INVERSE = {$/;"	kind:variable	line:19
+MSG	../commands.py	/^    MSG = 118$/;"	kind:variable	line:40
+MUSIC	../client/__init__.py	/^    MUSIC = 4$/;"	kind:variable	line:18
+MUSIC	../client/client_bak.py	/^    MUSIC = 4$/;"	kind:variable	line:18
+Message	../bak_database.py	/^Message = namedtuple('Message', 'id content read user_id created_at')$/;"	kind:variable	line:9
+Message	../models.py	/^class Message(Base):$/;"	kind:class	line:34
+Mode	../client/__init__.py	/^class Mode(enum.IntEnum):$/;"	kind:class	line:12
+Mode	../client/client_bak.py	/^class Mode(enum.IntEnum):$/;"	kind:class	line:12
+Mode	../client/mode.py	/^class Mode(enum.IntEnum):$/;"	kind:class	line:4
+OKBLUE	../iface.py	/^    OKBLUE = '\\033[94m'$/;"	kind:variable	line:7
+OKGREEN	../iface.py	/^    OKGREEN = '\\033[92m'$/;"	kind:variable	line:8
+ON_FRIEND_OFF_LINE	../commands.py	/^    ON_FRIEND_OFF_LINE = 108$/;"	kind:variable	line:30
+ON_NEW_MESSAGE	../commands.py	/^    ON_NEW_MESSAGE = 110$/;"	kind:variable	line:32
+ON_ROOM_USER_OFF_LINE	../commands.py	/^    ON_ROOM_USER_OFF_LINE = 113$/;"	kind:variable	line:35
+QUERY	../client/__init__.py	/^    QUERY = 5$/;"	kind:variable	line:19
+QUERY	../client/client_bak.py	/^    QUERY = 5$/;"	kind:variable	line:19
+QUERY	../client/mode.py	/^    QUERY = 2$/;"	kind:variable	line:7
+QUERY_SERVER_TIME	../commands.py	/^    QUERY_SERVER_TIME = 8$/;"	kind:variable	line:18
+REGISTER	../commands.py	/^    REGISTER = 2  # [username, password, nickname]$/;"	kind:variable	line:12
+REGISTER_SUCCESSFUL	../commands.py	/^    REGISTER_SUCCESSFUL = 102$/;"	kind:variable	line:24
+RoomUser	../bak_database.py	/^RoomUser = namedtuple('RoomUser', 'id user_id room_id')$/;"	kind:variable	line:8
+SEND_MESSAGE	../commands.py	/^    SEND_MESSAGE = 100$/;"	kind:variable	line:21
+SEND_SERVER_TIME	../commands.py	/^    SEND_SERVER_TIME = 106$/;"	kind:variable	line:28
+SERVER_KICK	../commands.py	/^    SERVER_KICK = 111$/;"	kind:variable	line:33
+SHOW_CHAT_HISTORY	../commands.py	/^    SHOW_CHAT_HISTORY = 109$/;"	kind:variable	line:31
+SHOW_ROOM_USERS	../commands.py	/^    SHOW_ROOM_USERS = 112$/;"	kind:variable	line:34
+SOLVE_FRIEND_REQUEST	../commands.py	/^    SOLVE_FRIEND_REQUEST = 4$/;"	kind:variable	line:14
+SecureChannel	../secure_channel.py	/^class SecureChannel:$/;"	kind:class	line:13
+Session	../models.py	/^Session = sessionmaker(bind=engine)$/;"	kind:variable	line:8
+UNDERLINE	../iface.py	/^    UNDERLINE = '\\033[4m'$/;"	kind:variable	line:13
+UNKNOWN	../client/commands.py	/^    UNKNOWN = 201$/;"	kind:variable	line:11
+USERNAME_TOKEN	../commands.py	/^    USERNAME_TOKEN = 116$/;"	kind:variable	line:38
+User	../bak_database.py	/^User = namedtuple('User', 'id name password created_at')$/;"	kind:variable	line:6
+User	../models.py	/^class User(Base):$/;"	kind:class	line:17
+WARNING	../iface.py	/^    WARNING = '\\033[93m'$/;"	kind:variable	line:9
+__init__	../client/client.py	/^    def __init__(self, mode=Mode.COMMAND, *args, **kwargs):$/;"	kind:member	line:13
+__init__	../messages.py	/^    def __init__(self, byte_array):$/;"	kind:member	line:231
+__init__	../secure_channel.py	/^    def __init__(self, socket, addr, shared_secret):$/;"	kind:member	line:18
+__init__.py	../client/__init__.py	1;"	kind:file	line:1
+__init__.py	../server/__init__.py	1;"	kind:file	line:1
+__repr__	../models.py	/^    def __repr__(self):$/;"	kind:member	line:30
+__tablename__	../models.py	/^    __tablename__ = 'chat_rooms'$/;"	kind:variable	line:46
+__tablename__	../models.py	/^    __tablename__ = 'friends'$/;"	kind:variable	line:58
+__tablename__	../models.py	/^    __tablename__ = 'messages'$/;"	kind:variable	line:36
+__tablename__	../models.py	/^    __tablename__ = 'users'$/;"	kind:variable	line:19
+_deserialize_any	../messages.py	/^def _deserialize_any(bytes):$/;"	kind:function	line:164
+_deserialize_bool	../messages.py	/^def _deserialize_bool(value):$/;"	kind:function	line:108
+_deserialize_by_type	../messages.py	/^_deserialize_by_type = [None, _deserialize_int, _deserialize_float,$/;"	kind:variable	line:158
+_deserialize_bytes	../messages.py	/^def _deserialize_bytes(body):$/;"	kind:function	line:120
+_deserialize_dict	../messages.py	/^def _deserialize_dict(bytes):$/;"	kind:function	line:139
+_deserialize_float	../messages.py	/^def _deserialize_float(bytes):$/;"	kind:function	line:112
+_deserialize_int	../messages.py	/^def _deserialize_int(value):$/;"	kind:function	line:104
+_deserialize_list	../messages.py	/^def _deserialize_list(bytes):$/;"	kind:function	line:124
+_deserialize_str	../messages.py	/^def _deserialize_str(bytes):$/;"	kind:function	line:116
+_get_client_secret	../secure_channel.py	/^def _get_client_secret():$/;"	kind:function	line:86
+_get_server_secret	../secure_channel.py	/^def _get_server_secret():$/;"	kind:function	line:90
+_get_share_secret	../secure_channel.py	/^def _get_share_secret(my_private_secret, their_secret):$/;"	kind:function	line:81
+_print_msg	../iface.py	/^def _print_msg(self, nickname, dst, msg, timestamp):$/;"	kind:function	line:31
+_print_prefix	../client/__init__.py	/^def _print_prefix():$/;"	kind:function	line:178
+_print_prefix	../client/client_bak.py	/^def _print_prefix():$/;"	kind:function	line:179
+_process_request	../client/__init__.py	/^def _process_request(secure_channel, request):$/;"	kind:function	line:47
+_process_request	../client/client_bak.py	/^def _process_request(secure_channel, request):$/;"	kind:function	line:47
+_process_request	../server/__init__.py	/^def _process_request(secure_channel, request):$/;"	kind:function	line:29
+_process_request	../server_bak.py	/^def _process_request(secure_channel, request):$/;"	kind:function	line:29
+_serialize_any	../messages.py	/^def _serialize_any(obj):$/;"	kind:function	line:91
+_serialize_bool	../messages.py	/^def _serialize_bool(value):$/;"	kind:function	line:36
+_serialize_by_type	../messages.py	/^_serialize_by_type = [None, _serialize_int, _serialize_float, _serialize_str,$/;"	kind:variable	line:86
+_serialize_bytes	../messages.py	/^def _serialize_bytes(body):$/;"	kind:function	line:53
+_serialize_dict	../messages.py	/^def _serialize_dict(dict):$/;"	kind:function	line:68
+_serialize_float	../messages.py	/^def _serialize_float(float):$/;"	kind:function	line:41
+_serialize_int	../messages.py	/^def _serialize_int(value):$/;"	kind:function	line:30
+_serialize_list	../messages.py	/^def _serialize_list(list):$/;"	kind:function	line:58
+_serialize_str	../messages.py	/^def _serialize_str(str):$/;"	kind:function	line:47
+a	../database.py	/^a = session.query(User).all()$/;"	kind:variable	line:9
+a	../messages.py	/^    a = deserialize_message(s)$/;"	kind:variable	line:252
+accept_secure_channel	../secure_channel.py	/^def accept_secure_channel(socket):$/;"	kind:function	line:115
+accepted	../models.py	/^    accepted = Column(Boolean, default=False)$/;"	kind:variable	line:63
+add_friend	../commands.py	/^def add_friend():$/;"	kind:function	line:78
+bak_database.py	../bak_database.py	1;"	kind:file	line:1
+base	../secure_channel.py	/^base = 5$/;"	kind:variable	line:75
+bcolors	../iface.py	/^class bcolors:$/;"	kind:class	line:5
+broadcast	../commands.py	/^def broadcast(secure_channel, request):$/;"	kind:function	line:97
+bytes_received	../client/__init__.py	/^bytes_received = 0$/;"	kind:variable	line:36
+bytes_received	../client/client_bak.py	/^bytes_received = 0$/;"	kind:variable	line:36
+bytes_received	../client/memory.py	/^bytes_received = 0$/;"	kind:variable	line:3
+bytes_received	../server/__init__.py	/^bytes_received = {}  # 已接收的字节数$/;"	kind:variable	line:21
+bytes_received	../server_bak.py	/^bytes_received = {}  # 已接收的字节数$/;"	kind:variable	line:21
+bytes_to_receive	../client/__init__.py	/^bytes_to_receive = 0$/;"	kind:variable	line:35
+bytes_to_receive	../client/client_bak.py	/^bytes_to_receive = 0$/;"	kind:variable	line:35
+bytes_to_receive	../client/memory.py	/^bytes_to_receive = 0$/;"	kind:variable	line:2
+bytes_to_receive	../server/__init__.py	/^bytes_to_receive = {}  # 要接收的字节数$/;"	kind:variable	line:20
+bytes_to_receive	../server_bak.py	/^bytes_to_receive = {}  # 要接收的字节数$/;"	kind:variable	line:20
+chat_history	../memory.py	/^chat_history = []$/;"	kind:variable	line:8
+chat_mode	../client/__init__.py	/^def chat_mode():$/;"	kind:function	line:166
+chat_mode	../client/client_bak.py	/^def chat_mode():$/;"	kind:function	line:167
+chat_rooms	../models.py	/^    chat_rooms = relationship('ChatRoom', secondary=room_user)$/;"	kind:variable	line:28
+client.py	../client/client.py	1;"	kind:file	line:1
+client_bak.py	../client/client_bak.py	1;"	kind:file	line:1
+client_private_secret	../secure_channel.py	/^client_private_secret = 15$/;"	kind:variable	line:78
+close	../secure_channel.py	/^    def close(self):$/;"	kind:member	line:68
+close_client	../server/__init__.py	/^def close_client(sock):$/;"	kind:function	line:37
+close_client	../server_bak.py	/^def close_client(sock):$/;"	kind:function	line:37
+comand_register	../commands.py	/^def comand_register(command=None):$/;"	kind:function	line:57
+command_register	../client/commands.py	/^def command_register(command=ClientCommand.):$/;"	kind:function	line:15
+command_wrong	../commands.py	/^def command_wrong(secure_channel, request):$/;"	kind:function	line:119
+commands	../client/commands.py	/^commands = dict()$/;"	kind:variable	line:3
+commands	../commands.py	/^commands = dict()$/;"	kind:variable	line:5
+commands.py	../client/commands.py	1;"	kind:file	line:1
+commands.py	../commands.py	1;"	kind:file	line:1
+commands.py	../server/commands.py	1;"	kind:file	line:1
+config.py	../config.py	1;"	kind:file	line:1
+conn	../bak_database.py	/^conn = sqlite3.connect('sqlite.db')$/;"	kind:variable	line:4
+content	../models.py	/^    content = Column(String(200), nullable=False)$/;"	kind:variable	line:41
+create_database	../bak_database.py	/^def create_database():$/;"	kind:function	line:27
+create_room	../commands.py	/^def create_room():$/;"	kind:function	line:83
+created_at	../models.py	/^    created_at = Column(DateTime(timezone=False),$/;"	kind:variable	line:20
+created_at	../models.py	/^    created_at = Column(DateTime(timezone=False),$/;"	kind:variable	line:38
+created_at	../models.py	/^    created_at = Column(DateTime(timezone=False),$/;"	kind:variable	line:49
+current_chat_room	../client/__init__.py	/^current_chat_room = 'default'  # 当期聊天室$/;"	kind:variable	line:33
+current_chat_room	../client/client_bak.py	/^current_chat_room = 'default'  # 当期聊天室$/;"	kind:variable	line:33
+current_mode	../client/__init__.py	/^current_mode = Mode.COMMAND  # 输入模式、命令模式$/;"	kind:variable	line:31
+current_mode	../client/client_bak.py	/^current_mode = Mode.COMMAND  # 输入模式、命令模式$/;"	kind:variable	line:31
+current_output	../client/__init__.py	/^current_output = 'command> '$/;"	kind:variable	line:32
+current_output	../client/client_bak.py	/^current_output = 'command> '$/;"	kind:variable	line:32
+data_buffer	../client/__init__.py	/^data_buffer = bytes()$/;"	kind:variable	line:37
+data_buffer	../client/client_bak.py	/^data_buffer = bytes()$/;"	kind:variable	line:37
+data_buffer	../client/memory.py	/^data_buffer = bytes()$/;"	kind:variable	line:4
+data_buffer	../server/__init__.py	/^data_buffer = {}  # 数据缓冲$/;"	kind:variable	line:22
+data_buffer	../server_bak.py	/^data_buffer = {}  # 数据缓冲$/;"	kind:variable	line:22
+database.py	../database.py	1;"	kind:file	line:1
+decorate	../commands.py	/^    def decorate(func):$/;"	kind:function	line:58
+deserialize_message	../messages.py	/^def deserialize_message(data):$/;"	kind:function	line:175
+empty	../messages.py	/^    def empty(self):$/;"	kind:member	line:245
+engine	../models.py	/^engine = create_engine('sqlite:\/\/\/database.db', echo=True)$/;"	kind:variable	line:7
+establish_secure_channel	../secure_channel.py	/^def establish_secure_channel():$/;"	kind:function	line:94
+from_user	../models.py	/^    from_user = Column(Integer, nullable=False)$/;"	kind:variable	line:61
+get_command_from_value	../commands.py	/^def get_command_from_value(value):$/;"	kind:function	line:46
+get_config	../config.py	/^def get_config():$/;"	kind:function	line:4
+get_user	../bak_database.py	/^def get_user(user_id):$/;"	kind:function	line:36
+help	../client/__init__.py	/^def help():$/;"	kind:function	line:138
+help	../client/client_bak.py	/^def help():$/;"	kind:function	line:139
+id	../models.py	/^    id = Column(Integer, primary_key=True)$/;"	kind:variable	line:23
+id	../models.py	/^    id = Column(Integer, primary_key=True)$/;"	kind:variable	line:37
+id	../models.py	/^    id = Column(Integer, primary_key=True)$/;"	kind:variable	line:48
+id	../models.py	/^    id = Column(Integer, primary_key=True)$/;"	kind:variable	line:60
+iface.py	../iface.py	1;"	kind:file	line:1
+inputs	../client/__init__.py	/^inputs = [sys.stdin, secure_channel.socket]$/;"	kind:variable	line:29
+inputs	../client/client_bak.py	/^inputs = [sys.stdin, secure_channel.socket]$/;"	kind:variable	line:29
+inputs	../server/__init__.py	/^inputs = [server_sock, sys.stdin]  # 监听socket$/;"	kind:variable	line:14
+inputs	../server_bak.py	/^inputs = [server_sock, sys.stdin]  # 监听socket$/;"	kind:variable	line:14
+join_room	../commands.py	/^def join_room():$/;"	kind:function	line:93
+login	../commands.py	/^def login(username, password):$/;"	kind:function	line:68
+login	../server/__init__.py	/^def login(username, password):$/;"	kind:function	line:126
+login	../server_bak.py	/^def login(username, password):$/;"	kind:function	line:126
+long_to_bytes	../messages.py	/^def long_to_bytes(val, endianness='big'):$/;"	kind:function	line:185
+loop_forever	../client/__init__.py	/^def loop_forever():$/;"	kind:function	line:55
+loop_forever	../client/client_bak.py	/^def loop_forever():$/;"	kind:function	line:55
+md5	../messages.py	/^def md5(text):$/;"	kind:function	line:224
+memory.py	../client/memory.py	1;"	kind:file	line:1
+memory.py	../memory.py	1;"	kind:file	line:1
+memory.py	../server/memory.py	1;"	kind:file	line:1
+messages.py	../messages.py	1;"	kind:file	line:1
+mode.py	../client/mode.py	1;"	kind:file	line:1
+models.py	../models.py	1;"	kind:file	line:1
+nickname	../models.py	/^    nickname = Column(String(20), nullable=False)$/;"	kind:variable	line:25
+off_line	../server/__init__.py	/^def off_line(secure_channel):$/;"	kind:function	line:42
+off_line	../server_bak.py	/^def off_line(secure_channel):$/;"	kind:function	line:42
+on_data	../secure_channel.py	/^    def on_data(self, data_array):$/;"	kind:member	line:50
+password	../models.py	/^    password = Column(String(100), nullable=False)$/;"	kind:variable	line:26
+prime	../secure_channel.py	/^prime = 23$/;"	kind:variable	line:76
+print_help	../iface.py	/^def print_help():$/;"	kind:function	line:16
+process_input	../client/__init__.py	/^def process_input(str_input):$/;"	kind:function	line:107
+process_input	../client/client_bak.py	/^def process_input(str_input):$/;"	kind:function	line:107
+process_request	../client/__init__.py	/^def process_request(request):$/;"	kind:function	line:187
+process_request	../client/client_bak.py	/^def process_request(request):$/;"	kind:function	line:188
+query_mode	../client/__init__.py	/^def query_mode():$/;"	kind:function	line:159
+query_mode	../client/client_bak.py	/^def query_mode():$/;"	kind:function	line:160
+query_room_users	../commands.py	/^    query_room_users = 7  # id:int$/;"	kind:variable	line:17
+query_server_echo	../commands.py	/^def query_server_echo(secure_channel, request):$/;"	kind:function	line:113
+query_server_time	../client/__init__.py	/^def query_server_time():$/;"	kind:function	line:173
+query_server_time	../client/client_bak.py	/^def query_server_time():$/;"	kind:function	line:174
+quit	../client/__init__.py	/^def quit():$/;"	kind:function	line:132
+quit	../client/client_bak.py	/^def quit():$/;"	kind:function	line:133
+read	../messages.py	/^    def read(self, length):$/;"	kind:member	line:235
+read_to_end	../messages.py	/^    def read_to_end(self):$/;"	kind:member	line:240
+receive	../client/__init__.py	/^def receive():$/;"	kind:function	line:192
+receive	../client/client_bak.py	/^def receive():$/;"	kind:function	line:193
+register	../commands.py	/^def register(username, password, nickname):$/;"	kind:function	line:73
+register	../server/__init__.py	/^def register(username, password, nickname):$/;"	kind:function	line:131
+register	../server_bak.py	/^def register(username, password, nickname):$/;"	kind:function	line:131
+remove_sc_from_socket_mapping	../memory.py	/^def remove_sc_from_socket_mapping(sc):$/;"	kind:function	line:11
+room_name	../models.py	/^    room_name = Column(String(20), nullable=False)$/;"	kind:variable	line:52
+room_number	../server/__init__.py	/^room_number = 0$/;"	kind:variable	line:26
+room_number	../server_bak.py	/^room_number = 0$/;"	kind:variable	line:26
+room_user	../models.py	/^room_user = Table($/;"	kind:variable	line:10
+run	../client/client.py	/^    def run():$/;"	kind:member	line:19
+s	../messages.py	/^    s = serialize_message(Command.LOGIN, 100000000000000000000)$/;"	kind:variable	line:251
+sc_to_user_id	../memory.py	/^sc_to_user_id = {}$/;"	kind:variable	line:1
+scs	../memory.py	/^scs = []$/;"	kind:variable	line:6
+secure_channel	../client/__init__.py	/^secure_channel = establish_secure_channel()$/;"	kind:variable	line:27
+secure_channel	../client/client_bak.py	/^secure_channel = establish_secure_channel()$/;"	kind:variable	line:27
+secure_channel.py	../secure_channel.py	1;"	kind:file	line:1
+secure_channel_to_user_id	../server/__init__.py	/^secure_channel_to_user_id = {}$/;"	kind:variable	line:16
+secure_channel_to_user_id	../server_bak.py	/^secure_channel_to_user_id = {}$/;"	kind:variable	line:16
+secure_channels	../server/__init__.py	/^secure_channels = []  # 客户端安全通道$/;"	kind:variable	line:15
+secure_channels	../server_bak.py	/^secure_channels = []  # 客户端安全通道$/;"	kind:variable	line:15
+send	../secure_channel.py	/^    def send(self, message_type, parameters=None):$/;"	kind:member	line:24
+send_message	../commands.py	/^def send_message():$/;"	kind:function	line:88
+send_server_time	../commands.py	/^def send_server_time(secure_channel, request):$/;"	kind:function	line:102
+serialize_message	../messages.py	/^def serialize_message(command_type, parameters):$/;"	kind:function	line:98
+serve_forever	../server/__init__.py	/^def serve_forever():$/;"	kind:function	line:58
+serve_forever	../server_bak.py	/^def serve_forever():$/;"	kind:function	line:58
+server_bak.py	../server_bak.py	1;"	kind:file	line:1
+server_private_secret	../secure_channel.py	/^server_private_secret = 6$/;"	kind:variable	line:77
+server_sock	../server/__init__.py	/^server_sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)$/;"	kind:variable	line:8
+server_sock	../server_bak.py	/^server_sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)$/;"	kind:variable	line:8
+session	../database.py	/^session = Session()$/;"	kind:variable	line:5
+socket_listener	../client/__init__.py	/^def socket_listener():$/;"	kind:function	line:42
+socket_listener	../client/client_bak.py	/^def socket_listener():$/;"	kind:function	line:42
+socket_to_sc	../memory.py	/^socket_to_sc = {}$/;"	kind:variable	line:3
+socket_to_secure_channel	../server/__init__.py	/^socket_to_secure_channel = {}$/;"	kind:variable	line:18
+socket_to_secure_channel	../server_bak.py	/^socket_to_secure_channel = {}$/;"	kind:variable	line:18
+to_user	../models.py	/^    to_user = Column(Integer, nullable=False)$/;"	kind:variable	line:62
+unkown	../client/__init__.py	/^def unkown():$/;"	kind:function	line:153
+unkown	../client/client_bak.py	/^def unkown():$/;"	kind:function	line:154
+user	../server/__init__.py	/^user = 'Anonymous user'$/;"	kind:variable	line:25
+user	../server_bak.py	/^user = 'Anonymous user'$/;"	kind:variable	line:25
+user_id_to_sc	../memory.py	/^user_id_to_sc = {}$/;"	kind:variable	line:2
+user_id_to_secure_channel	../server/__init__.py	/^user_id_to_secure_channel = {}$/;"	kind:variable	line:17
+user_id_to_secure_channel	../server_bak.py	/^user_id_to_secure_channel = {}$/;"	kind:variable	line:17
+username	../models.py	/^    username = Column(String(20), nullable=False)$/;"	kind:variable	line:24
+users	../models.py	/^    users = relationship('User', secondary=room_user)$/;"	kind:variable	line:53
+wrapper	../commands.py	/^        def wrapper(*args, **kwargs):$/;"	kind:function	line:61
