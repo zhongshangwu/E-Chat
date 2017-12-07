@@ -1,16 +1,14 @@
-from client.modes.base import BaseHandler, modes
+from client.modes.base import BaseHandler, Mode
 
 
 class CommandHandler(BaseHandler):
     
-    def _hook(self, statement):
+    def _hook_statement(self, statement):
+        from client.modes import modes as _modes
         if not statement:
             self._print_prefix()
-        elif statement not in modes:
+        elif statement not in [i.value for i in _modes]:
             self._wrong_command()
-        elif statement == 'help':
-            print("Help...")
-        elif statement == 'login':
-            print("Login...")
-        elif statement == 'register':
-            print("Register..")
+        else:
+            self.client.mode = Mode(statement)
+            self.client.handler = _modes[self.client.mode](self.client)

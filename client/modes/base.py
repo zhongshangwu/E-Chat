@@ -1,5 +1,5 @@
 import enum
-from client.routes import registry
+from commands import Command
 
 
 class Mode(enum.Enum):
@@ -7,15 +7,15 @@ class Mode(enum.Enum):
     CHAT = 'chat'
     QUERY = 'query'
     Login = 'login'
-
-
-modes = set({'command', 'chat', 'query', 'login'})
+    REGISTER = 'register'
+    CONTACT = 'contact'
 
 
 class BaseHandler:
 
     def __init__(self, client, *args, **kwargs):
         self.client = client
+        self._print_prefix()
 
     def _print_prefix(self):
         mode = self.client.mode
@@ -44,30 +44,64 @@ class BaseHandler:
         print("-   help : Print(this help message")
         print("-   quit : Quit chat")
         self._print_prefix()
+    
+    def _command_mode(self):
+        from client.modes.command import CommandHandler
+        self.client.mode = Mode.COMMAND
+        self.client.handler = CommandHandler(self.client)
 
     def _hook_statement(self, statement):
         ''' 子类实现 '''
         pass
 
     def process_statement(self, statement):
-        if statement == '\h':
+        if statement == 'help':
             self._print_help()
-        if statement == '\d':
+        elif statement == '\d':
             self.destroy()
-        if statement == '\c':
-            pass
+        elif statement == '\c':
+            self._command_mode()
         else:
-            self._hook(statement)
+            self._hook_statement(statement)
     
-    def _hook_request(self, request):
+    def _hook_request(self, command, request):
         pass
 
     def process_request(self, request):
-        req_command = request['command']
-        func = registry[req_command]
-        print('Command:', req_command)
-        func(self.client.secure_channel, request=request['params'])
-        self._hook_request(request)
+        command = request['command']
+        request = request['params']
+        if command == Command.LOGIN_BUNDLE:
+            self.client.chat_rooms = request['chat_rooms']
+            self.client.friends = request['friends']
+            self.client.pending_requests = request['pending_requests']
+            # self.client.messages = request['messages']
+            for message in request['messages']:
+                sent = message['sent']
+                self._handle_messages(message, not sent)
+        if command == Command.INCOMMING_FRIEND_REQUEST:
+            self.client.pending_requests.append(request)
+        if command == Command.ON_NEW_MESSAGE:
+            self._handle_messages(request, unread=True)
+        if command == Command.ON_NEW_ROOM:
+            self.client.chat_rooms.append(request)
+        self._hook_request(command, request)
 
+    def _handle_messages(self, message, unread=True):
+        # 更新聊天记录
+        self.client.chat_history[message['target_type']].\
+            setdefault(message['target'], [])
+        self.client.\
+            chat_history[message['target_type']][message['target']].\
+            append(message)
         
+        if not unread:
+            return
+
+        # 更新未读消息
+        self.client.unread_messages[message['target_type']].\
+            setdefault(message['target'], {'count': 0, 'content': []})
+        self.client.\
+            unread_messages[message['target_type']][message['target']]['count'] +=1
+        self.client.\
+            unread_messages[message['target_type']][message['target']]['content'].append(message)
         

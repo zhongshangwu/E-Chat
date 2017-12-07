@@ -1,70 +1,67 @@
 from sqlalchemy import Column, Integer, String, DateTime, ForeignKey
-from sqlalchemy import func, Table, Boolean, create_engine
+from sqlalchemy import func, Boolean, create_engine
 from sqlalchemy.ext.declarative import declarative_base
-from sqlalchemy.orm import relationship, sessionmaker
+from sqlalchemy.orm import sessionmaker
 
 Base = declarative_base()
 engine = create_engine('sqlite:///database.db', echo=True)
 Session = sessionmaker(bind=engine)
 
-room_user = Table(
-    'room_users', Base.metadata,
-    Column('chat_room_id', Integer, ForeignKey('chat_rooms.id')),
-    Column('user_id', Integer, ForeignKey('users.id'))
-)
+
+class Friend(Base):
+    ''' 好友 '''
+    __tablename__ = 'freinds'
+
+    from_user = Column('from_user', String(20), primary_key=True)
+    to_user = Column('to_user', String(20), primary_key=True)
+    created_at = Column(DateTime, default=func.now())
+    accepted = Column('accepted', Boolean, default=False)
 
 
 class User(Base):
     ''' 用户 '''
     __tablename__ = 'users'
-    created_at = Column(DateTime(timezone=False),
+    created_at = Column('created_at', DateTime(timezone=False),
                         nullable=False, default=func.now())
 
-    id = Column(Integer, primary_key=True)
-    username = Column(String(20), nullable=False)
-    nickname = Column(String(20), nullable=False)
-    password = Column(String(100), nullable=False)
-
-    chat_rooms = relationship('ChatRoom', secondary=room_user)
+    # id = Column('id', Integer, primary_key=True)
+    username = Column('username', String(20), primary_key=True)
+    password = Column('password', String(100), nullable=False)
 
     def __repr__(self):
-        return "<User(name='%s')>" % self.name
+        return "<User(username='%s')>" % self.username
 
 
 class Message(Base):
     ''' 消息 '''
     __tablename__ = 'messages'
-    id = Column(Integer, primary_key=True)
-    created_at = Column(DateTime(timezone=False),
-                        nullable=False, default=func.now())
-
-    content = Column(String(200), nullable=False)
+    id = Column('id', Integer, primary_key=True)
+    send_time = Column('send_time', Integer, nullable=False)
+    username = Column('username', String(20), ForeignKey('users.username'))
+    sender = Column('sender', String(20), ForeignKey('users.username'))
+    target_type = Column('target_type', Integer, nullable=False)
+    target = Column('target', String(20), nullable=False)
+    content = Column('content', String(200), nullable=False, default='')
+    sent = Column('sent', Boolean, default=False)
 
 
 class ChatRoom(Base):
     ''' 聊天室 '''
     __tablename__ = 'chat_rooms'
 
-    id = Column(Integer, primary_key=True)
-    created_at = Column(DateTime(timezone=False),
+    created_at = Column('created_at', DateTime(timezone=False),
                         nullable=False, default=func.now())
 
-    room_name = Column(String(20), nullable=False)
-    users = relationship('User', secondary=room_user)
+    room_name = Column('room_name', String(20), primary_key=True)
 
 
-class Friend(Base):
-    ''' 好友 '''
-    __tablename__ = 'friends'
+class RoomUser(Base):
+    ''' 聊天室成员 '''
+    __tablename__ = 'room_users'
 
-    id = Column(Integer, primary_key=True)
-    from_user = Column(Integer, nullable=False)
-    to_user = Column(Integer, nullable=False)
-    accepted = Column(Boolean, default=False)
+    roomname = Column('room', String(20), primary_key=True)
+    username = Column('user', String(20), primary_key=True)
 
 
 Base.metadata.bind = engine
 Base.metadata.create_all()
-
-
-

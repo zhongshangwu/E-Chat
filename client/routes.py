@@ -1,6 +1,7 @@
+import time
 from commands import Command
 
-registry = dict()
+# registry = dict()
 
 
 def command_router(command=None):
@@ -11,8 +12,3 @@ def command_router(command=None):
             return func(*args, **kwargs)
         return wrapper
     return decorate
-
-
-@command_router(Command.LOGIN)
-def login(request):
-    pass

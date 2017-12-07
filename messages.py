@@ -129,6 +129,9 @@ def _deserialize_list(bytes):
     ret = []
     while (not byte_reader.empty()):
         body_type = byte_reader.read(1)[0]
+        if body_type == 0:
+            ret.append(None)
+            continue
         body = byte_reader.read(int.from_bytes(
             byte_reader.read(4), byteorder='big'))
         body = _deserialize_by_type[body_type](body)
@@ -148,6 +151,9 @@ def _deserialize_dict(bytes):
         key = byte_reader.read(len_key[0])
 
         body_type = byte_reader.read(1)[0]
+        if body_type == 0:
+            ret[key.decode()] = None
+            continue
         body = byte_reader.read(int.from_bytes(
             byte_reader.read(4), byteorder='big'))
         body = _deserialize_by_type[body_type](body)

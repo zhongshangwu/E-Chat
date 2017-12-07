@@ -27,7 +27,7 @@ def print_help():
     print("-   quit : Quit chat")
 
 
-def _print_msg(self, nickname, dst, msg, timestamp):
+def _print_msg(self, username, dst, msg, timestamp):
         time_str = time.asctime(time.localtime(timestamp))
         if (dst == self.name):
             print('[{}] {} says to you: {}'.format(time_str, src, msg))

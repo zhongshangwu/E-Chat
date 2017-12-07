@@ -128,7 +128,7 @@ def login(username, password):
     pass
 
 
-def register(username, password, nickname):
+def register(username, password):
     ''' 注册 '''
     pass
 

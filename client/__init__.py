@@ -13,16 +13,20 @@ class Client:
     def __init__(self, mode=Mode.COMMAND, *args, **kwargs):
         self.mode = mode
         self.chat_room = 'default'
+        self.chat_rooms = []
+        self.friends = []
+        self.pending_requests = []
+        self.unread_messages = {0: {}, 1: {}}
+        self.chat_history = {0: {}, 1: {}}
         self.secure_channel = establish_secure_channel()
         self.inputs = [sys.stdin, self.secure_channel.socket]
         self.closed = False
         self.bytes_to_receive = 0
         self.bytes_received = 0
         self.data_buffer = bytes()
-        self.handler = modes[self.mode.name](self)
+        self.handler = modes[self.mode](self)
 
     def run(self):
-        print('Connected to remote host. Start sending messages...\ncommand> ', end='')
         while not self.closed:
             infds, outfds, errfds = select.select(self.inputs, [], [])
             for fds in infds:
