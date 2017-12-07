@@ -19,15 +19,6 @@ class ChatHandler(BaseHandler):
                 self._display_message(msg)
             print('------ 以上是历史消息 ------')
         self._clear_unread_messages()
-    
-    def _display_message(self, message):
-        send_time = datetime.datetime.fromtimestamp(
-            int(message['send_time'])
-        ).strftime('%Y-%m-%d %H:%M:%S')
-        if (message['sender'] == self.client.user):
-            print('[{}] me says: {}'.format(send_time, message['content']))
-        else:
-            print('[{}] {} says: {}'.format(send_time, message['sender'], message['content']))
         
     def _clear_unread_messages(self):
         # 清除未读消息

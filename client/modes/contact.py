@@ -93,7 +93,6 @@ class ContactHandler(BaseHandler):
                 for target, value in self.client.unread_messages[1].items():
                     if value['count']:
                         print('[聊天室:%s]----%d' % (target, value['count']))
-            print(self.client.unread_messages)
             self._print_prefix()
         elif statement.startswith('&'):  # 进入聊天模式
             parts = statement.split(None, 1)
@@ -167,7 +166,7 @@ class ContactHandler(BaseHandler):
                 self.client.pending_requests.remove(request)
             self._print_prefix()
         if command == Command.ON_NEW_MESSAGE:
-            print(request)
+            print('你有一条新的消息！')
             self._print_prefix()
         if command == Command.SEND_MESSAGE_FAILURE:
             print(request)

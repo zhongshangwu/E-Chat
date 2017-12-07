@@ -1,4 +1,5 @@
 import enum
+import datetime
 from commands import Command
 
 
@@ -104,4 +105,12 @@ class BaseHandler:
             unread_messages[message['target_type']][message['target']]['count'] +=1
         self.client.\
             unread_messages[message['target_type']][message['target']]['content'].append(message)
-        
+    
+    def _display_message(self, message):
+        send_time = datetime.datetime.fromtimestamp(
+            int(message['send_time'])
+        ).strftime('%Y-%m-%d %H:%M:%S')
+        if (message['sender'] == self.client.user):
+            print('[{}] me says: {}'.format(send_time, message['content']))
+        else:
+            print('[{}] {} says: {}'.format(send_time, message['sender'], message['content']))
