@@ -1,6 +1,8 @@
 # echat
 在学习Python socket时候，通过动手实现一个命令行在线聊天室项目，加深对socket编程>和网络编程的理解。主要使用到了`socket`和`select`模块来监听多客户端接入。
+
 ## 项目目录结构
+
 ```
 ├── client
 │   ├── display.py
@@ -31,6 +33,7 @@
     ├── __init__.py
     ├── memory.py
     └── routes.py
+```
 
 ## C/S 架构
 ![聊天室架构](/images/聊天室架构.png)
