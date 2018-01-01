@@ -95,7 +95,7 @@ def establish_secure_channel():
     ''' 客户端发起连接，并创建安全通道 '''
     s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
-    s.connect(('', 1024))
+    s.connect(('39.106.74.57', 1024))
 
     # 首次连接，用diffle hellman交换密钥
     s.send(long_to_bytes(_get_client_secret()))

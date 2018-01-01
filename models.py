@@ -4,7 +4,9 @@ from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
 
 Base = declarative_base()
-engine = create_engine('sqlite:///database.db', echo=True)
+# engine = create_engine('sqlite:///database.db', echo=True)
+engine = create_engine(
+    'mysql+pymysql://root:iPhone520@rm-2ze4u71p01tjv03741o.mysql.rds.aliyuncs.com:3306/echat?charset=utf8', echo=True)
 Session = sessionmaker(bind=engine)
 
 
